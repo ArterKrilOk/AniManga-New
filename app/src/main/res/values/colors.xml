@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFEF8300</color>
+    <color name="colorPrimaryDark">#FFC56714</color>
+    <color name="colorAccent">#FF1976D2</color>
+    <color name="colorAccentVariant">#FF42A5F5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="dark_grey">#FF353535</color>
+    <color name="mask">#A6000000</color>
+    <color name="mangaBgColor">#FF121212</color>
+</resources>

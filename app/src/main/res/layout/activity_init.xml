@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.InitActivity">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.pixelsg.animanga.viewmodels.InitActivityViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_margin="64dp"
+                android:stateListAnimator="@animator/idle_anim"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/ic_launcher" />
+
+            <com.pixelsg.animanga.views.AnimatedTextView
+                android:id="@+id/init_loading_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:animatedText="@{viewModel.message}" />
+
+            <Button
+                android:id="@+id/init_retry_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:stateListAnimator="@animator/click_anim"
+                android:text="@string/retry"
+                android:onClick="@{() -> viewModel.retry()}"
+                android:visibility="@{viewModel.retry? View.VISIBLE : View.INVISIBLE}" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

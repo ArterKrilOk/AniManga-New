@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/initActivity">
+
+    <activity
+        android:id="@+id/initActivity"
+        android:name="com.pixelsg.animanga.ui.InitActivity"
+        android:label="activity_init"
+        tools:layout="@layout/activity_init" />
+</navigation>
